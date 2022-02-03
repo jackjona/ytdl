@@ -36,6 +36,7 @@ app.get('/suggestions', async (req, res) => {
     q: search,
     part: 'snippet',
     type: 'video',
+    maxResults: 6
   };
   db.collection('searchstatistics').insertOne({ searchInput: search });
   try {
