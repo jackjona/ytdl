@@ -12,7 +12,7 @@ A simple Youtube video/audio downloader built with Node.JS & Next.JS
 OR
 - Search for your desired Youtube video using the search box
 OR
-- Replace `youtube.com` with `ytdl.cf` in your browser to direct download the video
+- Replace `youtube.com` with `backend.ytdl.cf` in your browser to direct download the video
 
 ## Responsive
 

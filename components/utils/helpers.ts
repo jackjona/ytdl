@@ -18,4 +18,5 @@ export const formats = [
   { text: 'MP3', format: '.mp3' },
   { text: 'MOV', format: '.mov' },
   { text: 'FLV', format: '.flv' },
+  { text: 'WEBM', format: '.webm' }
 ];

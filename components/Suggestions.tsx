@@ -14,7 +14,7 @@ export default function Suggestions(props: Props) {
     <Box>
       {!!data.length && (
         <Box mt="10">
-          <Heading textAlign="center">Suggestions</Heading>
+          <Heading textAlign="center"><span className="underline">Suggestions:</span></Heading>
         </Box>
       )}
       {isLoading && <SuggestionsSkeleton />}
@@ -22,7 +22,7 @@ export default function Suggestions(props: Props) {
         <SimpleGrid
           templateColumns="repeat(auto-fit, minmax(max(290px, 40%), 1fr))"
           spacing={10}
-          my="5"
+          my="6"
         >
           {data.map((suggestion) => {
             return (

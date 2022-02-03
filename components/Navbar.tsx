@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="w-11/12 h-ful border-gray-200 px-2 sm:px-4 py-2.5 rounded bg-gray-700">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <a href="/" className="flex ml-10">
-          <Image src="/logo.svg" alt="logo" width={48} height={48}/>
+          <Image src="/logo.png" alt="logo" width={48} height={48} />
           <span className="self-center text-lg font-semibold  dark:text-white">
             &nbsp; YTDL
           </span>

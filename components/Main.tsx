@@ -98,6 +98,7 @@ export default function Main() {
           chooseFormat={chooseFormat}
           isLoading={isSearchLoading}
         />
+        
       </Container>
       <VisuallyHidden>
         <a href={downloadUrl} download ref={downloadBtnRef}>

@@ -1,9 +1,8 @@
-import { ChevronDownIcon, DownloadIcon } from '@chakra-ui/icons';
+import { ChevronDownIcon, DownloadIcon } from "@chakra-ui/icons";
 import {
   Box,
   Heading,
   Image,
-  Grid,
   useColorModeValue,
   Text,
   Button,
@@ -11,8 +10,8 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-} from '@chakra-ui/react';
-import { thumbnailhost, formats } from './utils/helpers';
+} from "@chakra-ui/react";
+import { thumbnailhost, formats } from "./utils/helpers";
 
 interface Props {
   data: any;
@@ -24,14 +23,15 @@ export default function ConvertBox(props: Props) {
   return (
     <Box
       transition="all .2s ease-in-out"
-      bgColor={useColorModeValue('gray.100', 'gray.600')}
+      rounded="lg"
+      bgColor={useColorModeValue("gray.100", "gray.600")}
       m="5"
       _hover={{
-        background: useColorModeValue('gray.200', 'gray.700'),
+        background: useColorModeValue("gray.200", "gray.700"),
       }}
     >
       <Box>
-        <Grid alignItems="center" gridAutoFlow="column">
+        <div className="items-center flex flex-col lg:flex-row content-center">
           <Image
             src={`${thumbnailhost}${data.videoId}/mqdefault.jpg`}
             alt={`Thumbnail of ${data.title}`}
@@ -41,6 +41,9 @@ export default function ConvertBox(props: Props) {
             <Text mb="5">{data?.author?.name || data?.author?.user}</Text>
             <Menu>
               <MenuButton
+                mb="4"
+                bgColor="purple.500"
+                color={useColorModeValue("gray.100", "gray.100")}
                 as={Button}
                 leftIcon={<DownloadIcon />}
                 rightIcon={<ChevronDownIcon />}
@@ -59,8 +62,9 @@ export default function ConvertBox(props: Props) {
               </MenuList>
             </Menu>
           </Box>
-        </Grid>
+        </div>
       </Box>
     </Box>
   );
 }
+
