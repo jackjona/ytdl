@@ -2,6 +2,9 @@
 
 A simple Youtube video/audio downloader built with Node.JS & Next.JS
 
+![Screenshot of YTDL website in dark mode](https://raw.githubusercontent.com/jackjona123/ytdl/frontend/public/screenshot.png)
+![Screenshot of YTDL website in light mode](https://raw.githubusercontent.com/jackjona123/ytdl/frontend/public/screenshot-light.png)
+
 ## Branch
 
 **Note** This branch is only for the frontend.
@@ -21,8 +24,8 @@ This web app can be both used on mobile and desktops.
 ## Native Desktop Application*
 
 **The desktop application is the website in an Electron wrapper to run natively on desktops.* \
-For the Windows `.exe` click [here](https://icedrive.com) \
-For the macOS `.app` click [here](https://icedrive.com)
+For the macOS `.app` click [here](https://github.com/jackjona123/ytdl/releases/download/v1.0.0/YTDL.app.zip). Then extract the  `.zip`. 
+
 
 ## Software
 
@@ -30,7 +33,7 @@ For the macOS `.app` click [here](https://icedrive.com)
 
 - Node.js
 - Express
-- Mongoose 
+- Mong
 - MongoDB
 
 ### Frontend
@@ -51,3 +54,7 @@ Run: \
 Then: \
 
 `yarn dev` or `npm run dev` \
+
+## Credits
+- This is a fork of [bennymeier/youtube-downloader](https://github.com/bennymeier/youtube-downloader)
+- The Electron app was built using [nativefier](https://github.com/nativefier/nativefier)
