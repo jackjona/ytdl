@@ -30,6 +30,10 @@ app.get("/", (req, res) => {
   res.status(200).send("API Is Working.");
 });
 
+app.get("/healthz", (req, res) => {
+  res.status(200).send("API Is Healthy.");
+});
+
 app.get('/suggestions', async (req, res) => {
   const { search } = req.query;
   const options = {
