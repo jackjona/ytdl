@@ -5,9 +5,10 @@ const searchYoutube = require('youtube-api-v3-search');
 const contentDisposition = require('content-disposition');
 const app = express();
 const port = process.env.PORT || 4000;
-const YOUTUBE_KEY = require('./youtube_key');
 const db = require('./db');
 const statisticRoutes = require('./routes');
+
+require('dotenv').config();
 
 const reqOptions = {
   requestOptions: {
@@ -44,7 +45,7 @@ app.get('/suggestions', async (req, res) => {
   };
   db.collection('searchstatistics').insertOne({ searchInput: search });
   try {
-    const data = await searchYoutube(YOUTUBE_KEY, options);
+    const data = await searchYoutube(process.env.YOUTUBE_KEY, options);
     const { items } = data;
     return res.status(200).json({ success: true, data: items });
   } catch (error) {
